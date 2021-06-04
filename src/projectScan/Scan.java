@@ -51,9 +51,23 @@ public String ReturnToken (String s) {
 	 	
 	 	case(";"):
 	 	case("@"):return "Delimiter";
-	 	
-
-	 
+	 	case("BackedValue"):return "Return";
+	 	case("Beginning"):return "Start Statement";
+	 	case("Check-CaseOf"):return "Switch";
+	 	case("Clo"):return"Character";
+	 	case("Divisio"):return "Class";
+	 	case("End"):return "End Statement";
+	 	case("FBU"):return "Float";
+	 	case("InferedFrom"):return "Inheritance";
+	 	case("Ire"):return "Ire";
+	 	case("NoneValue"):return "Void";
+	 	case("RingWhen"): return "Loop";
+	 	case("SFBU"):return "SFloat";
+	 	case("STT"):return "Struct";
+	 	case("SetOfClo"):return "String"; 
+	 	case("Sire"):return "SInteger";
+	 	case("TerminateThisNow"):return "Break";
+	 	case("WhetherDo-Else"):return "Condition";
 	}
 	 
 
