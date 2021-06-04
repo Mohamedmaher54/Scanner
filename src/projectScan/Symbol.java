@@ -41,7 +41,7 @@ char state;
                  	 state = 'L';
                  }else if (c=='>') {
                  	 state = 'M';
-                 }else if (c=='@') {
+                 }else if (c=='@') {//check
                  	 state = 'N';
                  }else if (c=='*') {
                  	 state = 'O';
@@ -60,6 +60,9 @@ char state;
                  }else if (c=='~') {
                  	 state = 'V';
                  }
+                 else if (c=='_'||((c>='a'&&c<='z')&&(c>='A'&&c<='Z'))){
+                 	state = 'N';
+				 }
                  
                  
 
@@ -136,7 +139,11 @@ char state;
          }
          break;
              case ('N'): {
-                 state = 'A'; //this delmitr @ 
+//				if (c=='_'||((c>='a'&&c<='z')&&(c>='A'&&c<='Z'))){
+//					 state = 'A';//identifier
+//				 }else{
+                 state = 'A';
+//             }//this delmitr @
          }
          break;
              case ('O'): {
@@ -269,10 +276,14 @@ char state;
 		                    }else if (c=='~') {
 		                    	 state = 'V';
 		                    }
-		                    
-		                    
+//		                    else if (c=='_'||((c>='a'&&c<='z')||(c>='A'&&c<='Z'))){
+//								state = 'N';
+//							}
 
-		                }
+
+
+
+						}
 		                break;
 		                case ('B'): {
 		                    if (c == '=' ) {
@@ -344,10 +355,14 @@ char state;
 	                        }
 	                }
 	                break;
-		                case ('N'): {
-	                        state = 'N'; //this delmitr @ 
-	                }
-	                break;
+						  case ('N'): {
+//							  if (c=='_'||((c>='a'&&c<='z')||(c>='A'&&c<='Z'))){
+//								  state = 'z';//identifier
+//							  }else{
+								  state = 'N';
+//						  }//this delmitr @
+						  }
+						  break;
 		                case ('O'): {
 	                        state = 'O'; //this multi  *
 	                }
@@ -415,19 +430,22 @@ char state;
 	                        state = 'Y'; // && 
 	                }
 	                break;
+						  case ('z'):
+						  	state='z';//identifier
 		                
 		                
 		            }// end Switch
-	            	  if (state == 'A') {
-//	  	            	System.out.println("lexeme is != "+s.ReturnToken(string));
-	  		             state ='A';
+/*	            	  if (state == 'A') {
+	  	            	System.out.println("lexeme is  "+s.ReturnToken(string));
+
 	  		        } 
 	  		        else if (state == 'A') {
 	  		            System.out.println("lexeme is >= ");
 	  		             
 	  		        } else {
-	  		           // System.out.println("DFA does not accepts this string");
-	  		        }
+	  		            System.out.println("DFA does not accepts this string");
+	  		        }*/
+//					System.out.println("lexeme is  "+s.ReturnToken(string));
 	            }// end if
 	        }//end for
 	 }

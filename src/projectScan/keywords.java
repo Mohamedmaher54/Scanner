@@ -1858,10 +1858,10 @@ public class keywords {
         }
         break;}//end Switch
       	  if (state == "A") {
-           //	System.out.println("lexeme is != "+s.ReturnToken(string));
+           	System.out.println("lexeme is "+s.ReturnToken(string));
 	             state ="A";
 	        } 
-	     
+
 	             
 	        else {
 	           System.out.println("DFA does not accepts this string");
