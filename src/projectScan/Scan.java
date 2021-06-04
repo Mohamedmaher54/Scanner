@@ -3,7 +3,7 @@ package projectScan;
 import java.util.Scanner;
 
 public class Scan {
-	int flag=0;
+	 Check ch = new Check();
 	public String ReturnToken(String s) {
 
 		switch (s) {
@@ -56,10 +56,7 @@ public class Scan {
 				return "comment";
 
 			case (";"):
-			case ("@"):
-
-				     flag =1;
-					return "Delimiter";
+			case ("@"):return "Delimiter";
 
 
 			case ("BackedValue"):
@@ -96,25 +93,13 @@ public class Scan {
 				return "Break";
 			case ("WhetherDo-Else"):
 				return "Condition";
+		 default:
+		 return "Not Matched";
 		}
 
 
-//		switch (s) {
-//			case ("@"):
-//				System.out.println("fuck");
-//
-//
-//		}
-		if (flag==1) {
-			System.out.println("uiyyuuyuyyuyuyuyuyu");
-			for (char c : s.toCharArray()) {
-				if ((c >= 'a' && c >= 'z') || (c >= 'A' && c <= 'Z') || c == '_') {
 
-					return "identifier";
-				}
-			}
-		}
-		return null;
+		
 	}
 
 }

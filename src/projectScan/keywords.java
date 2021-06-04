@@ -4,14 +4,13 @@ public class keywords {
 	String string;
 	  String state = "A";
 	public keywords(String keystring) {
-		 //System.out.println("Enter Strig to Run on DFA :");
+		
 		string=keystring;
-		// Scan s=new Scan();
+		
 	}
-	Scan s=new Scan();
+	//Scan s=new Scan(string);
 	public void check_keyword() {
-		       // = "BackedValue";
-		      // String state = "A";
+		     
 		       for (char c : string.toCharArray()) {
 		           switch (state) {
 		               case ("A"): {
@@ -934,7 +933,7 @@ public class keywords {
 	               break;
            }// end Switch
           
-          //System.out.println("lexeme is != "+s.ReturnToken("!="));
+          
 	        
            //repeat switch
            if(state=="A") {
@@ -1857,15 +1856,7 @@ public class keywords {
              
         }
         break;}//end Switch
-      	  if (state == "A") {
-           	System.out.println("lexeme is "+s.ReturnToken(string));
-	             state ="A";
-	        } 
-
-	             
-	        else {
-	           System.out.println("DFA does not accepts this string");
-	        }
+      	  
       	  }// end if
       }//end for
 	}

@@ -9,7 +9,7 @@ char state;
 		// TODO Auto-generated constructor stub
 		string = st;
 	}
-	 Scan s=new Scan();
+	// Scan s=new Scan();
 	 public void check_Sympol() {
  
 		 
@@ -86,6 +86,7 @@ char state;
                      state = 'X';
                  }  
              }
+             break;
              case ('E'): {
                  if (c == '&' ) {
                      state = 'Y';
@@ -303,6 +304,7 @@ char state;
 		                        state = 'X';
 		                    }  
 		                }
+		                break;
 		                case ('E'): {
 		                    if (c == '&' ) {
 		                        state = 'Y';
