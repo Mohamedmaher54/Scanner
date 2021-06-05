@@ -2,15 +2,14 @@ package projectScan;
 
 public class Check {
     String string;
-    char state = 'B';
-    int flag;
+    char state = 'A';
+    int flag=0;
     public  Check(){
     }
     public  String check(String s) {
         for (char c : s.toCharArray()) {
             switch (state) {
-                case ('A'):
-                {
+                case ('A'):{
                 if(c=='@')
                     state='B';
                 } break;
@@ -92,7 +91,7 @@ public class Check {
 
         }
         if (flag==1) {
-        	return "Identifier";
+        	return "Identifier" ;
         }
         else {
         return "Not Identifier";

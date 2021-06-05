@@ -226,22 +226,23 @@ public class form1 extends javax.swing.JFrame {
         Check ch = new Check();
         String w =null;
         String string;
+        String textFile;
         try {
             File myFile = new File(filename);
             Scanner myReader = new Scanner(myFile);
 
             while (myReader.hasNextLine()) {
-                string = myReader.nextLine();
-                String []word = string.split(" ");
+                textFile = myReader.nextLine();
+                String []word = textFile.split(" ");
                 //for keywords + symbols
                 for(int i=0;i<word.length;i++)
                 {
-                    System.out.println(sc.ReturnToken(word[i]));
+                    System.out.println( sc.ReturnToken(word[i]));
                     w = word[i];
 
                 }
                 System.out.println(ch.check(w));
-                Symbol s = new Symbol (string);
+                Symbol s = new Symbol (textFile);
                 s.check_Sympol();
             }
             myReader.close();
@@ -258,7 +259,7 @@ public class form1 extends javax.swing.JFrame {
         s.check_Sympol();
         Scan sc = new Scan();
         Check ch = new Check();
-        String []word = string.split("@");
+        String []word = string.split(" ");
         DefaultTableModel model =(DefaultTableModel)jTable1.getModel();
 
         for(int i=0;i<word.length;i++)
