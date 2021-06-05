@@ -69,13 +69,13 @@ char state;
                  if (c == '=' ) {
                      state = 'W';
                  } else {
-                 	state = 'B'; //Assignment operator
+                 	state = 'A'; //Assignment operator
                  }
              }
              break;
              
              case ('C'): {
-                     state = 'C';   // Quotation Mark  double
+                     state = 'A';   // Quotation Mark  double
              }
              break;
              case ('D'): {
@@ -429,10 +429,7 @@ char state;
 	                        state = 'Y'; // && 
 	                }
 	                break;
-						  case ('z'):
-						  	state='z';//identifier
-		                
-		                
+
 		            }// end Switch
 /*	            	  if (state == 'A') {
 	  	            	System.out.println("lexeme is  "+s.ReturnToken(string));
