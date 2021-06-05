@@ -60,9 +60,6 @@ char state;
                  }else if (c=='~') {
                  	 state = 'V';
                  }
-                 else if (c=='_'||((c>='a'&&c<='z')&&(c>='A'&&c<='Z'))){
-                 	state = 'N';
-				 }
                  
                  
 
@@ -153,7 +150,7 @@ char state;
          break;
              case ('P'): {
              	if(c=='|')
-                 state = 'e';  
+                 state = 'A';
          }
          break;
              case ('Q'): {
@@ -371,7 +368,7 @@ char state;
 	                break;
 		                case ('P'): {
 		                	if(c=='|')
-	                        state = 'e';  
+	                        state = 'P';
 	                }
 	                break;
 		                case ('Q'): {

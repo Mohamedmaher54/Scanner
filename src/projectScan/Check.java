@@ -8,17 +8,10 @@ public class Check {
     }
     public  String check(String s) {
         for (char c : s.toCharArray()) {
-            
+
             switch (state) {
-                case('A'):{
-                    if(c=='@'){
-                        state='B';
-         
-                    }
-                }
-                break;
                 case('B'):{
-                	
+
                      if((c>='a'&&c<='z')||(c>='A'&&c<='Z')||(c=='_')) {
                         state = 'C';
 
@@ -31,33 +24,28 @@ public class Check {
                 break;
                 case ('C'):{
                     if(c>='0'&&c<='9') {
-                        state ='A';// final idintifier with 1
-                    flag=1;
+                        state ='C';// final idintifier with 1
+                        return "Identifier1";
+//                    flag=1;
                     }
                     else {
-                    	
-                    state='A';//finel identifier
-                    flag=1;
+
+                    state='B';//finel identifier
+                        return "Identifier2";
+//                    flag=1;
                     }
-                  
-                }break;
+
+                }
+//                break;
                 case('D'):{
-                    state = 'A';//failed
-                    flag=0;
+                    state = 'B';//failed
+//                    flag=0;
                 }
                     break;
 
             }//end switch
-            if (state=='A') {
+            if (state=='B') {
             switch (state) {
-                case('A'):{
-                    if(c=='@'){
-                        state='B';
-
-                    }
-                    
-                }
-                break;
                 case('B'):{
                      if((c>='a'&&c<='z')||(c>='A'&&c<='Z')|| (c=='_')) {
                         state = 'C';
@@ -72,16 +60,20 @@ public class Check {
                 case ('C'):{
                     if(c>='0'&&c<='9') {
                         state ='C';// final idintifier with 1
-                    flag=1;}
+                        return "Identifier3";
+//                    flag=1;
+                    }
                     else {
                         state='C';//finel identifier
-                        flag=1;}
-                        
+                        return "Identifier4";
+//                        flag=1;
+                    }
+
                 }
-                break;
+//                break;
                 case('D'):{
                     state = 'D';//failed
-                flag=0;
+//                flag=0;
                 }
                     break;
 
@@ -89,11 +81,12 @@ public class Check {
             }//end if
 
         }
-        if (flag==1) {
-        	return "Identifier";
-        }
-        else {
-        return "Not Matchedzzzz";
-        }
+//        if (flag==1) {
+//        	return "Identifier";
+//        }
+//        else {
+//        return "Not Matchedzzzz";
+//        }
+        return "no";
     }
 }

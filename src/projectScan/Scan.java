@@ -57,8 +57,6 @@ public class Scan {
 
 			case (";"):
 			case ("@"):return "Delimiter";
-
-
 			case ("BackedValue"):
 				return "Return";
 			case ("Beginning"):
