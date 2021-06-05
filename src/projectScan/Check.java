@@ -2,7 +2,7 @@ package projectScan;
 
 public class Check {
     String string;
-    char state = 'A';
+    char state = 'B';
     int flag;
     public  Check(){
     }

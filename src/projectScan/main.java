@@ -18,7 +18,7 @@ public class main {
 		//System.out.println()
 		
 		//for identifier
-		String []word = string.split("");
+		String []word = string.split("@");
 		//for keywords + symbols
 		for(int i=0;i<word.length;i++)
 		{
